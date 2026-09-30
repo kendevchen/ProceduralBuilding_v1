@@ -55,7 +55,7 @@ async function loadTextureSet(quality: TextureQuality): Promise<TextureSet> {
   const jobs: Promise<void>[] = [];
   for (const [matName, slots] of Object.entries(TEXTURE_FILES)) {
     for (const [slot, [file, srgb]] of Object.entries(slots)) {
-      jobs.push(loader.loadAsync(`/textures/${quality}/${file}`).then(t => {
+      jobs.push(loader.loadAsync(`${import.meta.env.BASE_URL}textures/${quality}/${file}`).then(t => {
         set[matName as keyof TextureSet][slot as Slot] = tex(t, srgb);
       }));
     }

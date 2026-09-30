@@ -737,7 +737,9 @@ devWindow.__setEnv = s => {
   env.frame(getBounds());
 };
 
-kit.load("/assets/kit.glb", "/assets/kit_manifest.json").then(() => {
+// BASE_URL = "/" in dev, "/ProceduralBuilding_v1/" on GitHub Pages
+const base = import.meta.env.BASE_URL;
+kit.load(`${base}assets/kit.glb`, `${base}assets/kit_manifest.json`).then(() => {
   env.applyMood(env.settings.mood); // materials exist now: apply the mood's night lights too
   document.getElementById("loading")?.remove();
   // inject the wet-surface shader into the building materials once (inert while
