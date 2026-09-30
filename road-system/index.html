@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Road System Lab</title>
+    <style>
+      html, body { margin: 0; height: 100%; overflow: hidden; background: #dde3e8; }
+      #app { position: fixed; inset: 0; }
+      #stats {
+        position: fixed; left: 12px; top: 12px; z-index: 10;
+        padding: 6px 10px; border-radius: 8px;
+        background: rgba(20, 24, 30, 0.72); color: #d8f0ff;
+        font: 12px/1.55 ui-monospace, "SF Mono", monospace;
+        white-space: pre; pointer-events: none;
+      }
+      #help {
+        position: fixed; left: 12px; bottom: 10px; z-index: 10;
+        color: rgba(20, 24, 30, 0.55);
+        font: 11px/1.4 ui-monospace, "SF Mono", monospace;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="stats"></div>
+    <div id="help">左鍵旋轉 · 滾輪縮放 · 右鍵平移 · 點一下路口：切換斑馬線（再點一下恢復自動）</div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

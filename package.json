@@ -1,0 +1,24 @@
+{
+  "name": "building-generator-threejs",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "dev:road": "vite road-system",
+    "test:road": "tsx road-system/tests/check.ts"
+  },
+  "dependencies": {
+    "lil-gui": "^0.20.0",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "@types/three": "^0.185.0",
+    "puppeteer-core": "^25.3.0",
+    "tsx": "^4.22.5",
+    "typescript": "^6.0.3",
+    "vite": "^8.1.3"
+  }
+}

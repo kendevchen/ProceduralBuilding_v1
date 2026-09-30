@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.vite/
+.DS_Store
+*.log
+# Blender auto-backups
+*.blend1
+# third-party asset snapshots (478 MB) — kept outside the repo; see Shared_Assets_Library/README.md locally
+Shared_Assets_Library/
